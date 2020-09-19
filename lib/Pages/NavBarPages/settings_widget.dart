@@ -20,6 +20,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             Container(
               margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){},
+                    elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       side: BorderSide(color: Colors.orange),
@@ -29,6 +30,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){},
+                    elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       side: BorderSide(color: Colors.orange),
@@ -38,6 +40,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){},
+                    elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       side: BorderSide(color: Colors.orange),
