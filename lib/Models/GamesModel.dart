@@ -8,9 +8,8 @@ class GamesModel {
   String image;
   List<String> synonymsNames;
   int difficulty;
-  String gameType;
 
-  GamesModel(this.gamename,this.description,this.image,this.needed,this.synonymsNames,this.difficulty,this.gameType);
+  GamesModel(this.gamename,this.description,this.image,this.needed,this.synonymsNames,this.difficulty);
   // Constructor used for conversion from JSON to Games.
   factory GamesModel.fromJson(Map<String, dynamic> json){
     return GamesModel(
@@ -19,8 +18,7 @@ class GamesModel {
       json['image'] as String,
       (json['needed'] as List)?.map((e) => e as String)?.toList(),
       (json['synonymNames'] as List)?.map((e) => e as String)?.toList(),
-      json['difficulty'] as int,
-      json['gameType'] as String
+      json['difficulty'] as int
     );
   }
 }
