@@ -24,7 +24,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       borderRadius: BorderRadius.circular(20.0),
                       side: BorderSide(color: Colors.orange),
                     ), color: Colors.white,
-              child: Text("About", style: TextStyle(fontSize: 30, color: Colors.orange),))
+              child: Text("Suggest Game", style: TextStyle(fontSize: 30, color: Colors.orange),))
             ),
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
@@ -42,7 +42,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       borderRadius: BorderRadius.circular(20.0),
                       side: BorderSide(color: Colors.orange),
                     ), color: Colors.white,
-                    child: Text("Suggest Game", style: TextStyle(fontSize: 30, color: Colors.orange,),))
+                    child: Text("About", style: TextStyle(fontSize: 30, color: Colors.orange,),))
             ),
           ],
         ),
