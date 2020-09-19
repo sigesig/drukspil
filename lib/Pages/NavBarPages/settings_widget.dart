@@ -14,8 +14,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
       child: Center(
         child: Column(
           children: <Widget>[
-
-
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+              child: Text(""),
+            )
           ],
         ),
       ),
