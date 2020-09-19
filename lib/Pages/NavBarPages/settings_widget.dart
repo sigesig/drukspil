@@ -13,14 +13,40 @@ class _SettingsWidgetState extends State<SettingsWidget> {
     return Container(
       child: Center(
         child: Column(
-          children: <Widget>[
+          children: [
             Container(
               margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
-              child: Text(""),
-            )
+              child: Text("Settings", style: TextStyle(fontSize: 50, color: Colors.black), ),),
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
+                child: RaisedButton(onPressed: (){},
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      side: BorderSide(color: Colors.orange),
+                    ), color: Colors.white,
+              child: Text("About", style: TextStyle(fontSize: 30, color: Colors.orange),))
+            ),
+            Container(
+                margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
+                child: RaisedButton(onPressed: (){},
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      side: BorderSide(color: Colors.orange),
+                    ), color: Colors.white,
+                    child: Text("Feedback", style: TextStyle(fontSize: 30, color: Colors.orange),))
+            ),
+            Container(
+                margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
+                child: RaisedButton(onPressed: (){},
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      side: BorderSide(color: Colors.orange),
+                    ), color: Colors.white,
+                    child: Text("Suggest Game", style: TextStyle(fontSize: 30, color: Colors.orange,),))
+            ),
           ],
         ),
-      ),
+      )
     );
   }
 }
