@@ -1,6 +1,10 @@
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
+import 'NavBarPages/favorite_page_widget.dart';
+import 'NavBarPages/games_library_widget.dart';
+import 'NavBarPages/settings_widget.dart';
+
 class MainPage extends StatefulWidget {
   MainPage({Key key}) : super(key: key);
 
