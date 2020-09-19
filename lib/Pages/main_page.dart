@@ -27,14 +27,15 @@ class _MainPageState extends State<MainPage> {
        title: Text("101 Drukspil"),
         centerTitle: true,
       ),
-      body: Text("OSRS er et legende spill",
-      textAlign: TextAlign.center,
-      style: TextStyle(fontSize: 30,color: Colors.red),),
+      body: Stack(children: <Widget>[
+        _children[_currentIndex],
+      ],
+      ),
       bottomNavigationBar: FancyBottomNavigation(
           tabs:[
-            TabData(iconData:Icons.gamepad, title: "Mange Bajer"),
-            TabData(iconData: Icons.access_time, title: "Bajer"),
-            TabData(iconData: Icons.settings, title: "Indstillinger")
+            TabData(iconData:Icons.casino, title: "Games Library"),
+            TabData(iconData: Icons.star, title: "Favorites"),
+            TabData(iconData: Icons.settings, title: "Settings")
           ],
           onTabChangedListener: (int position) {
             setState(() {

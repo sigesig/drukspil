@@ -10,6 +10,15 @@ class SettingsWidget extends StatefulWidget {
 class _SettingsWidgetState extends State<SettingsWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Center(
+        child: Column(
+          children: <Widget>[
+
+
+          ],
+        ),
+      ),
+    );
   }
 }
