@@ -1,4 +1,4 @@
-package com.marlen.drukspil;
+package com.kjellecorp.BundEllerBosse;
 
 import io.flutter.embedding.android.FlutterActivity;
 
