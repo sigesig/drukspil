@@ -5,15 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomDialog extends StatefulWidget {
-  final String title, description, buttonText, uid;
-  final Image image;
+  final String title, description, buttonText;
 //Used to make sure it is not possible to press button multiple times
   CustomDialog({
     @required this.title,
     @required this.description,
     @required this.buttonText,
-    @required this.uid,
-    this.image,
   });
 
   @override
@@ -87,7 +84,7 @@ class _CustomDialogState extends State<CustomDialog> {
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Enter group name',
-                  icon: Icon(Icons.kitchen),
+                  icon: Icon(Icons.subject),
                 ),
                 onChanged: (text) {
                   groupName = text;
@@ -100,7 +97,7 @@ class _CustomDialogState extends State<CustomDialog> {
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Choose an image',
-                  icon: Icon(Icons.photo),
+                  icon: Icon(Icons.edit),
                 ),
                 onChanged: (text) {
                   imagePath = text;
