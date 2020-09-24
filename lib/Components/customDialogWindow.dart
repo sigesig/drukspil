@@ -19,8 +19,8 @@ class CustomDialog extends StatefulWidget {
 
 class _CustomDialogState extends State<CustomDialog> {
 
-  String TextFormField1;
-  String TextFormField2;
+  String textFormField1;
+  String textFormField2;
   //Used to make sure it is not possible to press button multiple times
   bool isPressed = false;
   bool doneUploading = false;
@@ -88,7 +88,7 @@ class _CustomDialogState extends State<CustomDialog> {
                   icon: Icon(Icons.kitchen),
                 ),
                 onChanged: (text) {
-                  TextFormField1 = text;
+                  textFormField1 = text;
                 },
                 controller: myController1,
                 keyboardType: TextInputType.text,
@@ -101,7 +101,7 @@ class _CustomDialogState extends State<CustomDialog> {
                   icon: Icon(Icons.photo),
                 ),
                 onChanged: (text) {
-                  TextFormField2 = text;
+                  textFormField2 = text;
                 },
                 controller: myController2,
                 keyboardType: TextInputType.text,
@@ -115,7 +115,7 @@ class _CustomDialogState extends State<CustomDialog> {
                   onPressed: () async {
                     if (!isPressed) {
                       isPressed = true;
-                      if (TextFormField1.length <= 3 || TextFormField2.isEmpty) {
+                      if (textFormField1.length <= 3 || textFormField2.isEmpty) {
                         isPressed = false;
                       } else{
                         setState(() {
