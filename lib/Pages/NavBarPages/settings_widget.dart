@@ -25,14 +25,13 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 ),
               ),
             ),
-            //Suggest game
             Container(
               margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){
                   return showDialog(
                     context: context,
                     builder: (BuildContext context) => CustomDialog(
-                      title: "Suggest Game",
+                      title: "Suggest game",
                       buttonText: "Send",
                       header1: "Game Name",
                       icon1: Icons.casino,
@@ -51,19 +50,18 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     child: Text("Suggest Game", style: TextStyle(fontSize: 30, color: Colors.orange),)),
                 )
             ),
-            //Feedback
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){
                   return showDialog(
                     context: context,
                     builder: (BuildContext context) => CustomDialog(
-                      title: "Feedback",
-                      buttonText: "Send",
-                      header1: "Subject",
-                      icon1: Icons.subject,
-                      header2: "Comment",
-                      icon2: Icons.comment,
+                        title: "Feedback",
+                        buttonText: "Send",
+                        header1: "Subject",
+                        icon1: Icons.subject,
+                        header2: "Comment",
+                        icon2: Icons.comment,
                     ),
                   );
                 },
@@ -77,10 +75,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       child: Text("Feedback", style: TextStyle(fontSize: 30, color: Colors.orange),)),
                     )
             ),
-            //about
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
-                child: RaisedButton(onPressed: (){},
+                child: RaisedButton(onPressed: (){
+                },
                     elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
