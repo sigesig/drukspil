@@ -61,7 +61,6 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       description:
                       "This will create a test group",
                       buttonText: "Create",
-                      uid: "123",
                     ),
                   );
                 },
