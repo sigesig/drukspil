@@ -27,7 +27,19 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
-                child: RaisedButton(onPressed: (){},
+                child: RaisedButton(onPressed: (){
+                  return showDialog(
+                    context: context,
+                    builder: (BuildContext context) => CustomDialog(
+                      title: "Suggest game",
+                      buttonText: "Send",
+                      header1: "Game Name",
+                      icon1: Icons.casino,
+                      header2: "Description",
+                      icon2: Icons.edit,
+                    ),
+                  );
+                },
                     elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
@@ -40,7 +52,19 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             ),
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
-                child: RaisedButton(onPressed: (){},
+                child: RaisedButton(onPressed: (){
+                  return showDialog(
+                    context: context,
+                    builder: (BuildContext context) => CustomDialog(
+                        title: "Feedback",
+                        buttonText: "Send",
+                        header1: "Subject",
+                        icon1: Icons.subject,
+                        header2: "Comment",
+                        icon2: Icons.comment,
+                    ),
+                  );
+                },
                     elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
@@ -54,15 +78,6 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){
-                  return showDialog(
-                    context: context,
-                    builder: (BuildContext context) => CustomDialog(
-                      title: "Create group",
-                      description:
-                      "This will create a test group",
-                      buttonText: "Create",
-                    ),
-                  );
                 },
                     elevation: 10,
                     shape: RoundedRectangleBorder(
