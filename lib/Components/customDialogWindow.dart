@@ -5,12 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomDialog extends StatefulWidget {
-  final String title, description, buttonText;
+  final String title, description, buttonText, icon1, icon2, header1, header2;
 
   CustomDialog({
     @required this.title,
     @required this.description,
     @required this.buttonText,
+    @required this.icon1,
+    @required this.icon2,
+    @required this.header1,
+    @required this.header2,
   });
 
   @override
