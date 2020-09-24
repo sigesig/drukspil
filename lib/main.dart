@@ -1,3 +1,4 @@
+import 'package:drukspil/Pages/loading_screen_widget.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
 
           // Once complete, show your application
           if (snapshot.connectionState == ConnectionState.done) {
+            print(snapshot.connectionState);
             return MaterialApp(
               title: 'Flutter Demo',
               theme: ThemeData(
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
           }
 
           // Otherwise, show something whilst waiting for initialization to complete
-          return CircularProgressIndicator();
+          return LoadingScreenWidget();
         },
       );
     }
