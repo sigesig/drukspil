@@ -16,7 +16,14 @@ class _SettingsWidgetState extends State<SettingsWidget> {
           children: [
             Container(
               margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
-              child: Text("Settings", style: TextStyle(fontSize: 50, color: Colors.black), ),),
+              child: Text("Settings",
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
             Container(
               margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: RaisedButton(onPressed: (){},
