@@ -1,0 +1,30 @@
+[
+  {
+    "gamename": "test game",
+    "description": "This is the description of test game",
+    "needed": [
+      "balls 1",
+      "tests 2"
+    ],
+    "image": "Assets/Images/TestBillede1",
+    "synonymsNames": [
+      "testGame",
+      "GameTest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "gamename": "test game2",
+    "description": "This is the description of test game",
+    "needed": [
+      "balls 1",
+      "tests 2"
+    ],
+    "image": "Assets/Images/TestBillede2",
+    "synonymsNames": [
+      "testGame2",
+      "GameTest2"
+    ],
+    "difficulty": 1
+  }
+]
