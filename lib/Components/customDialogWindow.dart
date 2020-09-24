@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 
 class CustomDialog extends StatefulWidget {
   final String title, description, buttonText;
-//Used to make sure it is not possible to press button multiple times
+
   CustomDialog({
     @required this.title,
     @required this.description,
@@ -19,8 +19,9 @@ class CustomDialog extends StatefulWidget {
 
 class _CustomDialogState extends State<CustomDialog> {
 
-  String groupName;
-  String imagePath;
+  String TextFormField1;
+  String TextFormField2;
+  //Used to make sure it is not possible to press button multiple times
   bool isPressed = false;
   bool doneUploading = false;
   final TextEditingController myController1 = TextEditingController();
@@ -84,10 +85,10 @@ class _CustomDialogState extends State<CustomDialog> {
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Enter group name',
-                  icon: Icon(Icons.subject),
+                  icon: Icon(Icons.kitchen),
                 ),
                 onChanged: (text) {
-                  groupName = text;
+                  TextFormField1 = text;
                 },
                 controller: myController1,
                 keyboardType: TextInputType.text,
@@ -97,10 +98,10 @@ class _CustomDialogState extends State<CustomDialog> {
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Choose an image',
-                  icon: Icon(Icons.edit),
+                  icon: Icon(Icons.photo),
                 ),
                 onChanged: (text) {
-                  imagePath = text;
+                  TextFormField2 = text;
                 },
                 controller: myController2,
                 keyboardType: TextInputType.text,
@@ -114,12 +115,13 @@ class _CustomDialogState extends State<CustomDialog> {
                   onPressed: () async {
                     if (!isPressed) {
                       isPressed = true;
-                      if (groupName.length <= 3 || imagePath.isEmpty) {
+                      if (TextFormField1.length <= 3 || TextFormField2.isEmpty) {
                         isPressed = false;
                       } else{
                         setState(() {
 
                         });
+                        //Removes keyboard
                         FocusScopeNode currentFocus = FocusScope.of(context);
                         if (!currentFocus.hasPrimaryFocus) {
                           currentFocus.unfocus();
