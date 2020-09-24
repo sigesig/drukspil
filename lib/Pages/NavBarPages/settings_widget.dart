@@ -1,3 +1,4 @@
+import 'package:drukspil/Components/customDialogWindow.dart';
 import 'package:flutter/material.dart';
 
 class SettingsWidget extends StatefulWidget {
@@ -52,7 +53,18 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             ),
             Container(
                 margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
-                child: RaisedButton(onPressed: (){},
+                child: RaisedButton(onPressed: (){
+                  return showDialog(
+                    context: context,
+                    builder: (BuildContext context) => CustomDialog(
+                      title: "Create group",
+                      description:
+                      "This will create a test group",
+                      buttonText: "Create",
+                      uid: "123",
+                    ),
+                  );
+                },
                     elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
