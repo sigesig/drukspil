@@ -1,15 +1,16 @@
 import 'dart:io';
 
+import 'package:drukspil/Database/DatabaseService.dart';
 import 'package:drukspil/Pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomDialog extends StatefulWidget {
-  final String title, description, buttonText, icon1, icon2, header1, header2;
+  final String title, buttonText, header1, header2;
+  final IconData icon1, icon2;
 
   CustomDialog({
     @required this.title,
-    @required this.description,
     @required this.buttonText,
     @required this.icon1,
     @required this.icon2,
@@ -22,7 +23,7 @@ class CustomDialog extends StatefulWidget {
 }
 
 class _CustomDialogState extends State<CustomDialog> {
-
+  String validateText;
   String textFormField1;
   String textFormField2;
   //Used to make sure it is not possible to press button multiple times
@@ -88,28 +89,28 @@ class _CustomDialogState extends State<CustomDialog> {
               //Text field for group name
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Enter group name',
-                  icon: Icon(Icons.kitchen),
+                  labelText: widget.header1,
+                  icon: Icon(widget.icon1),
                 ),
                 onChanged: (text) {
                   textFormField1 = text;
                 },
                 controller: myController1,
                 keyboardType: TextInputType.text,
-                validator: validateName,
+                validator: validate,
                 autovalidate: true,
               ),
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Choose an image',
-                  icon: Icon(Icons.photo),
+                  labelText: widget.header2,
+                  icon: Icon(widget.icon2),
                 ),
                 onChanged: (text) {
                   textFormField2 = text;
                 },
                 controller: myController2,
                 keyboardType: TextInputType.text,
-                validator: validateName,
+                validator: validate,
                 autovalidate: true,
               ),
               SizedBox(height: 2.0),
@@ -130,7 +131,12 @@ class _CustomDialogState extends State<CustomDialog> {
                         if (!currentFocus.hasPrimaryFocus) {
                           currentFocus.unfocus();
                         }
-                        //await DatabaseService(uid: widget.uid).createGroup(groupName, imagePath).whenComplete(() => uploadData());
+                        if (widget.title == "Feedback") {
+                          await DatabaseService().sendFeedback(textFormField1, textFormField2).whenComplete(() => uploadData());
+                        }
+                        else{
+                          DatabaseService().sendSuggest(textFormField1, textFormField2).whenComplete(() => uploadData());
+                        }
                       }
                     }
                   },
@@ -165,10 +171,10 @@ class _CustomDialogState extends State<CustomDialog> {
     );
   }
 
-  String validateName(String value) {
+  String validate(String value) {
     if (value.length < 3){
       isPressed = true;
-      return 'Name must be more than 2 charater';
+      return 'Must be more than 2 characters';
     } else {
       isPressed = false;
       return null;
