@@ -132,10 +132,10 @@ class _CustomDialogState extends State<CustomDialog> {
                           currentFocus.unfocus();
                         }
                         if (widget.title == "Feedback") {
-                          await DatabaseService().sendFeedback(textFormField1, textFormField2).whenComplete(() => uploadData());
+                          await DatabaseService().sendFeedback(textFormField1, textFormField2).then((value) => print("data added"));
                         }
                         else{
-                          DatabaseService().sendSuggest(textFormField1, textFormField2).whenComplete(() => uploadData());
+                          await DatabaseService().sendSuggest(textFormField1, textFormField2).then((value) => print("data added"));
                         }
                       }
                     }
