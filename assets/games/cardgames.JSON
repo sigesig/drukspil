@@ -11,7 +11,8 @@
       "testGame",
       "GameTest"
     ],
-    "difficulty": 1
+    "difficulty": 1,
+    "favorite": false
   },
   {
     "gamename": "test game2",
@@ -25,6 +26,7 @@
       "testGame2",
       "GameTest2"
     ],
-    "difficulty": 1
+    "difficulty": 1,
+    "favorite": false
   }
 ]

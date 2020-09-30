@@ -24,7 +24,12 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       title: Text("101 Drukspil"),
+       title: Text("101 Drukspil",
+       style: TextStyle(
+         fontWeight: FontWeight.bold,
+         color: Colors.white
+       ),
+       ),
         centerTitle: true,
       ),
       body: Stack(children: <Widget>[
