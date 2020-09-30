@@ -17,6 +17,7 @@ class _GamesLibraryWidgetState extends State<GamesLibraryWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //TODO: USE ANIMATEDLIST TO MAKE THIS LOOK PRETTY WHEN CHANGING THE GRIDVIEW WITH I.E. SEARCH OR FILTER
       child:  GridView.count(
         crossAxisCount: 2,
         children: <Widget>[

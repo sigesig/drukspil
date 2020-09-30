@@ -47,6 +47,7 @@ class _MainPageState extends State<MainPage> {
 }
 
 //TODO: Make this pretty so it smooth animates between appbars
+//TODO: Use SliverAppBar for the library site so we can remove the appbar when scrolling through the gridview
 Widget DynamicAppBar(){
   if (_currentIndex == 0) {
     return AppBar(
