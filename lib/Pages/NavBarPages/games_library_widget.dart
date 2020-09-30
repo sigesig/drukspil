@@ -51,3 +51,4 @@ Widget BuildGamesCategoryWidget(String dataString, String categoryName, IconData
   );
 
 }
+
