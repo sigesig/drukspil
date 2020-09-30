@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
   }
 }
 
-//TODO: Make this pretty so it smooth animates between bars
+//TODO: Make this pretty so it smooth animates between appbars
 Widget DynamicAppBar(){
   if (_currentIndex == 0) {
     return AppBar(
