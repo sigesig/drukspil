@@ -13,7 +13,7 @@ Future<List<GamesModel>> fetchGamesFromJSON(String dataString) async {
   WidgetsFlutterBinding.ensureInitialized();
   final String dataLocation = await _loadFromAsset(dataString);
   // Get the JSON data from the response
-  print("Really nigga");
+  print("Really niggas");
   final List<dynamic> data = await jsonDecode(dataLocation);
   // Convert JSON to Games by using the named constructor from Json
   return data.map((json) => GamesModel.fromJson(json)).toList();

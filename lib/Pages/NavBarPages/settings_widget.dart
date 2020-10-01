@@ -320,10 +320,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     ),
                   ),
                   Checkbox(
-                    value: false,
+                    value: true,
                     onChanged: (bool value){
                       setState(() {
-
+                        value = false;
                       });
                     } ,
                     activeColor: Colors.orange,
