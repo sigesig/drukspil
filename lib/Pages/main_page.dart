@@ -23,10 +23,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-       title: Text("101 Drukspil"),
-        centerTitle: true,
-      ),
+      appBar: DynamicAppBar(),
       body: Stack(children: <Widget>[
         _children[_currentIndex],
       ],
@@ -45,6 +42,55 @@ class _MainPageState extends State<MainPage> {
           initialSelection: 1,
           circleColor: Colors.orange,
         )
+    );
+  }
+}
+
+//TODO: Make this pretty so it smooth animates between appbars
+//TODO: Use SliverAppBar for the library site so we can remove the appbar when scrolling through the gridview
+Widget DynamicAppBar(){
+  if (_currentIndex == 0) {
+    return AppBar(
+      title: Text("101 Drukspil",
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+        ),
+      ),
+      centerTitle: true,
+      actions: <Widget>[
+        IconButton(
+          icon: Icon(
+            Icons.search,
+            semanticLabel: 'search',
+            color: Colors.white,
+          ),
+          onPressed: () {
+            print('Search button');
+          },
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.tune,
+            semanticLabel: 'filter',
+            color: Colors.white,
+          ),
+          onPressed: () {
+            print('Filter button');
+          },
+        ),
+      ],
+    );
+  }
+  else{
+    return AppBar(
+      title: Text("101 Drukspil",
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+        ),
+      ),
+      centerTitle: true,
     );
   }
 }

@@ -23,7 +23,7 @@ class CustomDialog extends StatefulWidget {
 }
 
 class _CustomDialogState extends State<CustomDialog> {
-
+  String validateText;
   String textFormField1;
   String textFormField2;
   //Used to make sure it is not possible to press button multiple times
@@ -131,10 +131,11 @@ class _CustomDialogState extends State<CustomDialog> {
                         if (!currentFocus.hasPrimaryFocus) {
                           currentFocus.unfocus();
                         }
-                        if (widget.title == 'Feedback'){
-                          await DatabaseService().sendFeedback(textFormField1, textFormField2).whenComplete(() => uploadData());
-                        } else {
-                          await DatabaseService().sendSuggest(textFormField1, textFormField2).whenComplete(() => uploadData());
+                        if (widget.title == "Feedback") {
+                          await DatabaseService().sendFeedback(textFormField1, textFormField2).then((value) => print("data added"));
+                        }
+                        else{
+                          await DatabaseService().sendSuggest(textFormField1, textFormField2).then((value) => print("data added"));
                         }
                       }
                     }
@@ -173,7 +174,7 @@ class _CustomDialogState extends State<CustomDialog> {
   String validate(String value) {
     if (value.length < 3){
       isPressed = true;
-      return 'must be more than 2 characters';
+      return 'Must be more than 2 characters';
     } else {
       isPressed = false;
       return null;
